@@ -1,0 +1,7 @@
+import pandas as pd
+cars = pd.read_csv('cars.csv')
+odds = cars.loc[:,['Model','cyl','hp','wt','vs','gear']]
+Model_Maz = cars[cars['Model']=="Mazda RX4"]
+cylinders = cars.loc[cars['Model']=="Camaro Z28",['cyl']]
+cylgear = cars.loc[cars['Model'].isin(['Mazda RX4 Wag','Ford Pantera L','Honda Civic']),
+                   ['Model','cyl','gear']]
